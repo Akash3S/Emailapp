@@ -6,7 +6,7 @@ import '../../../constant.dart';
 
 class CounterBadge extends StatelessWidget{
   const CounterBadge({
-    required Key key,
+   Key? key,
     required this.count,
   }) : super(key: key);
 

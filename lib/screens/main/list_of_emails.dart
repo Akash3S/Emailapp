@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ListOfEmails extends StatefulWidget {
   const ListOfEmails({
-    required Key key,
+   Key? key,
   }) : super(key: key);
 
   @override
