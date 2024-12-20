@@ -1,18 +1,18 @@
 import 'package:flutter/animation.dart';
 
 class Email {
-final String image,name,subject,body,time;
-final bool isAttachmentAvailable ,isChecked;
-final Color tagColor ;
+final String ?image,name,subject,body,time;
+final bool? isAttachmentAvailable ,isChecked;
+final Color? tagColor ;
 Email({
-required this.time,
-  required this.isChecked,
-  required this.image,
-  required this.name,
-  required this.subject,
-  required this.body,
-  required this.isAttachmentAvailable,
-  required this.tagColor,
+this.time,
+   this.isChecked,
+   this.image,
+   this.name,
+   this.subject,
+   this.body,
+   this.isAttachmentAvailable,
+  this.tagColor,
 });
 }
 List<Email>emails = List.generate(

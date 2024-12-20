@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mail_app/responsive.dart';
 import 'package:mail_app/screens/main/component/side_menu_item.dart';
+import 'package:mail_app/screens/main/component/tags.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 import '../../constant.dart';
@@ -40,9 +41,11 @@ class Sidemenu extends StatelessWidget {
                 ElevatedButton.icon(
                   // Add style property
                   style: ElevatedButton.styleFrom(
+
                     backgroundColor: kPrimaryColor, // Instead of color
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
+
                     ),
                   ),
                   onPressed: () {},
@@ -103,6 +106,7 @@ class Sidemenu extends StatelessWidget {
                   showBorder: false,
                 ),
                 SizedBox(height: kDefaultPadding*2,),
+                Tags(),
             
               ],
             ),
