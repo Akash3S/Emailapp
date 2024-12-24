@@ -24,12 +24,10 @@ class _ListOfEmailsState extends State<ListOfEmails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
- drawer: ConstrainedBox(
-        constraints:BoxConstraints(maxWidth:250),
-    child: const Sidemenu(),
-
- ),
-
+       drawer: ConstrainedBox(
+           constraints:BoxConstraints(maxWidth: 250),
+           child: Sidemenu()),
+      key: _scaffoldKey,
       body: Container(
         child:  Padding(
           padding: const EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
@@ -50,7 +48,8 @@ class _ListOfEmailsState extends State<ListOfEmails> {
               ),
                     if(!Responsive.isDesktop(context))
                     SizedBox(height: 5,),
-                    Expanded(child: TextField(
+                    Expanded(
+                        child: TextField(
                       onChanged: (value){},
                       decoration: InputDecoration(
                         hintText: "Search",

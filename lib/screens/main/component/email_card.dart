@@ -23,7 +23,7 @@ class EmailCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: kDefaultPadding,
-        horizontal: kDefaultPadding,
+        horizontal: kDefaultPadding/2,
       ),
       child: InkWell(
         onTap: press,
@@ -31,7 +31,7 @@ class EmailCard extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: isActive! ? kBgDarkColor : kPrimaryColor,
+                color: isActive! ?   kPrimaryColor: kBgDarkColor ,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Column(
@@ -111,7 +111,7 @@ class EmailCard extends StatelessWidget {
               borderRadius: 15,
               offset: const Offset(5, 5),
               topShadowColor: Colors.white60,
-              bottomShadowColor: const Color(0xFF234395).withOpacity(0.15),
+              bottomShadowColor:  Color(0xFF234395).withOpacity(0.15),
             ),
             if (!(email?.isChecked ?? true))
               Positioned(
@@ -130,15 +130,7 @@ class EmailCard extends StatelessWidget {
                   offset: const Offset(2, 2),
                 ),
               ),
-            Positioned(
-              right: 8,
-              top: 0,
-              child: SvgPicture.asset(
-                "assets/Icons/Markup filled.svg",
-                height: 18,
-                color: email?.tagColor,
-              ),
-            ),
+           
           ],
         ),
       ),
